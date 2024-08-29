@@ -31,7 +31,7 @@
     }
   },
   "indentationRules": {
-    "increaseIndentPattern": "^((?!\\/\\/|choose|\"|').)*(\\{[^}\"']*|\\([^)\"']*|\\[[^\\]\"']*|then\\s*(\\/\\/.*)?|(for|do|try|case)\\b[^;]*)$",
-    "decreaseIndentPattern": "^((?!.*?\\/\\*).*\\*\\/)?\\s*([\\)\\}\\]]|(end|loop|next|case)\\b).*$"
+    "increaseIndentPattern": "^((?!\\/\\/|\"|').)*(\\{[^}\"']*|\\([^)\"']*|\\[[^\\]\"']*|then\\s*(\\/\\/.*)?|(for|do|try|case)\\b[^;]*)$",
+    "decreaseIndentPattern": "^(.*\\*\\/)?\\s*([\\)\\}\\]]|(end|loop|next|case|catch|finally)\\b).*$"
   }
 }
