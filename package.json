@@ -1,39 +1,65 @@
 {
-  "name": "markdown-fenced-codeblock-example-injection",
-  "displayName": "Markdown fenced code block example injection",
-  "description": "",
+  "name": "powerbuilder",
+  "displayName": "PowerBuilder",
+  "description": "Adds some PowerBuilder support",
   "version": "0.0.1",
-  "publisher": "bierner",
+  "publisher": "micha4w",
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/mjbvz/vscode-fenced-code-block-grammar-injection-example.git"
+    "type": "git",
+    "url": "https://github.com/micha4w/powerbuilder-vscode"
   },
   "bugs": {
-    "url": "https://github.com/mjbvz/vscode-fenced-code-block-grammar-injection-example/issues"
+    "url": "https://github.com/micha4w/powerbuilder-vscode/issues"
   },
   "engines": {
     "vscode": "^1.8.0"
   },
   "categories": [
-    "Other"
+    "Programming Languages"
   ],
   "contributes": {
     "languages": [
       {
-        "id": "superjs-injection"
+        "id": "powerbuilder-codeblock"
+      },
+      {
+        "id": "powerbuilder",
+        "aliases": ["pb"],
+        "configuration": "./language-configuration.json",
+        "extensions": [
+          "sru",
+          "srd",
+          "srm",
+          "srw",
+          "srs",
+          "srf",
+          "sra",
+          "srp",
+          "srj",
+          "srq",
+          "pbl",
+          "pbt",
+          "pbw"
+        ]
       }
     ],
     "grammars": [
       {
-        "language": "superjs-injection",
-        "scopeName": "markdown.superjs.codeblock",
+        "language": "powerbuilder-codeblock",
+        "scopeName": "markdown.powerbuilder.codeblock",
         "path": "./syntaxes/codeblock.json",
         "injectTo": [
           "text.html.markdown"
-        ],
-        "embeddedLanguages": {
-          "meta.embedded.block.superjs": "javascript"
-        }
+        ]
+      },
+      {
+        "language": "powerbuilder",
+        "scopeName": "source.powerbuilder",
+        "path": "./syntaxes/powerbuilder.json",
+        "injectTo": [
+          "text.html.markdown"
+        ]
       }
     ]
   },
