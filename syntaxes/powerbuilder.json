@@ -17,6 +17,7 @@
     "pbw"
   ],
   "name": "PowerBuilder",
+  "firstLineMatch": "^((HA)?(?=\\$)|forward)",
   "patterns": [
     {
       "include": "#strings"
@@ -222,7 +223,7 @@
         },
         {
           "name": "constant.numeric.number.powerbuilder",
-          "match": "\\b(\\d+(\\.\\d+)?|(\\.\\d+))([eE][+\\-]\\d+)?\\b"
+          "match": "(\\b|\\+|-)(\\d+(\\.\\d+)?|(\\.\\d+))([eE][+\\-]?\\d+)?\\b"
         },
         {
           "name": "constant.language.boolean.powerbuilder",
@@ -374,7 +375,7 @@
         },
         {
           "name": "meta.header.powerbuilder",
-          "begin": "\\A(HA)?",
+          "begin": "\\A(HA)?(?=\\$)",
           "end": "^(?!\\$)",
           "captures": {
             "1": {
